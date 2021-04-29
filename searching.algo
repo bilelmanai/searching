@@ -1,0 +1,19 @@
+ALGORITHM Insertion sor
+VAR
+    tab : ARRAY_OF INTEGER[50];
+    i,j,n,size:INTEGER;
+BEGIN
+    read(size)
+    FOR i FROM 0 TO size-1  DO
+        read(n)
+        j:=i-1;
+        WHILE (j>=0 AND tab[j]>n ) DO
+            tab[j+1]:=tab[j]
+            j:=j-1
+        END_WHILE
+        tab[j+1]:=n;
+    END_FOR
+    write(tab);
+END
+
+
